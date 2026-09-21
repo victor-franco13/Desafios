@@ -1,0 +1,24 @@
+GBC073 - Trabalho final
+
+Grupo: Caio Couto
+       Victor Franco
+
+Tema: Aprendizado por Reforço em jogos Atari com redes convolucionais
+
+Descrição:
+O trabalho estuda como um agente pode aprender a jogar jogos do Atari usando
+apenas os pixels da tela e a pontuação como recompensa. A entrada é processada
+por uma rede neural convolucional (CNN), que estima o valor de cada ação
+possível, como no algoritmo Deep Q-Network (DQN) proposto pela DeepMind.
+
+Proposta:
+- Estudar os fundamentos: aprendizado por reforço, Q-learning, DQN, experience
+  replay e rede-alvo.
+- Implementar e treinar agentes de DQN e PPO em jogos como Pong e Breakout,
+  usando Gymnasium (ALE) e Stable-Baselines3.
+- Comparar o desempenho dos algoritmos pelas curvas de recompensa ao longo do
+  treinamento.
+
+Referência principal:
+Mnih et al. (2015). Human-level control through deep reinforcement learning.
+Nature.
