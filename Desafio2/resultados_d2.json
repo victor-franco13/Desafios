@@ -1,0 +1,2684 @@
+{
+ "f=0.25|e=1|s=1": {
+  "he_ref": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 1.0,
+    "criterio": "variancia",
+    "pesos": "normal",
+    "escala_saida": 1.0,
+    "ativ": "relu"
+   },
+   "escore": 30.06626725196838,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9144,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 0.882,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.2 0.79 | ‖grad W‖: 3.5 1.5 1.5",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.6088,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 0.701,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.9 1.2 | ‖grad W‖: 3.3 2.8 3.4",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.1148,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 3.6 4.3 | ‖grad W‖: 3.5 5.9 8.6",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8312,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 0.759,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.98 1.1 0.86 | ‖grad W‖: 4.2 2.1 2.1",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.392,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 0.587,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 1.9 1.1 | ‖grad W‖: 3.8 3.6 3.9",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.0964,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 3.5 4 | ‖grad W‖: 3.8 7.2 11",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.3728,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.97 0.97 1.2 | ‖grad W‖: 6.3 1.7 1.9",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.238,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 0.936,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.91 0.45 0.57 | ‖grad W‖: 4.7 1.4 1.9",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.0968,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 1.2 0.42 | ‖grad W‖: 5.2 1.8 1.9",
+     "erro": null
+    }
+   ]
+  },
+  "relu_s01": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 1.0,
+    "criterio": "variancia",
+    "pesos": "normal",
+    "escala_saida": 0.1,
+    "ativ": "relu"
+   },
+   "escore": 40.801764130592346,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9176,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 1.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.2 0.0079 | ‖grad W‖: 0.32 0.13 1.3",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.6952,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 0.823,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.9 0.012 | ‖grad W‖: 0.31 0.14 1.2",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.1148,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 3.6 0.043 | ‖grad W‖: 0.27 0.17 2.5",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8292,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 0.586,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.98 1.1 0.0086 | ‖grad W‖: 0.39 0.15 1.4",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.4608,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 0.724,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 1.9 0.011 | ‖grad W‖: 0.32 0.16 1.1",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.0964,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 3.5 0.04 | ‖grad W‖: 0.25 0.19 2",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.3572,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.97 0.97 0.012 | ‖grad W‖: 0.55 0.12 1.2",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.2268,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 0.862,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.91 0.45 0.0057 | ‖grad W‖: 0.43 0.069 0.94",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.166,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 1.2 0.0042 | ‖grad W‖: 0.47 0.089 0.75",
+     "erro": null
+    }
+   ]
+  },
+  "relu_ort": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 1.0,
+    "criterio": "variancia",
+    "pesos": "ortogonal",
+    "escala_saida": 1.0,
+    "ativ": "relu"
+   },
+   "escore": 52.92738795280456,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9216,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 1.147,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.1 1 | ‖grad W‖: 3.1 1.4 1.4",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.8332,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 1.019,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.3 1.7 | ‖grad W‖: 3.6 3.5 3.9",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.1148,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.4 0.26 | ‖grad W‖: 3.1 1.7 2.5",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8384,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.95 0.9 | ‖grad W‖: 4 2.1 2.2",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.7364,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 1.3 1.6 | ‖grad W‖: 3.6 3.8 4.6",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.0964,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1.4 0.21 | ‖grad W‖: 3.2 2.1 1.9",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.3556,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1 1.4 | ‖grad W‖: 5.8 1.9 2.4",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.2308,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 0.889,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.64 0.96 | ‖grad W‖: 5.3 1.5 2.3",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.1888,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.91 0.56 | ‖grad W‖: 6.3 2.3 2.3",
+     "erro": null
+    }
+   ]
+  },
+  "relu_ort_s01": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 1.0,
+    "criterio": "variancia",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "relu"
+   },
+   "escore": 54.617455005645745,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9128,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 0.824,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.1 0.01 | ‖grad W‖: 0.3 0.13 1.3",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.7792,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 0.943,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.3 0.017 | ‖grad W‖: 0.29 0.14 1.2",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.2004,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.4 0.0026 | ‖grad W‖: 0.29 0.16 1.3",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8396,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.95 0.009 | ‖grad W‖: 0.37 0.15 1.4",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.2536,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 0.312,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 1.3 0.016 | ‖grad W‖: 0.29 0.15 1",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.0964,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1.4 0.0021 | ‖grad W‖: 0.32 0.17 0.83",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.3496,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1 0.014 | ‖grad W‖: 0.51 0.11 1.2",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.2768,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 1.194,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.64 0.0096 | ‖grad W‖: 0.5 0.089 1.1",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.1824,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.91 0.0056 | ‖grad W‖: 0.54 0.1 0.9",
+     "erro": null
+    }
+   ]
+  },
+  "relu_ort_s0": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 1.0,
+    "criterio": "variancia",
+    "pesos": "ortogonal",
+    "escala_saida": 0.0,
+    "ativ": "relu"
+   },
+   "escore": 29.924401938915253,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9116,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 0.779,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.1 0 | ‖grad W‖: 0 0 1.4",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.2236,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 0.154,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.3 0 | ‖grad W‖: 0 0 1.1",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.1148,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.4 0 | ‖grad W‖: 0 0 1.3",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8328,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 0.897,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.95 0 | ‖grad W‖: 0 0 1.3",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.4824,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 0.767,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 1.3 0 | ‖grad W‖: 0 0 0.84",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.0964,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1.4 0 | ‖grad W‖: 0 0 0.86",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.344,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1 0 | ‖grad W‖: 0 0 1.3",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.3008,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.64 0 | ‖grad W‖: 0 0 1.2",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.0968,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.91 0 | ‖grad W‖: 0 0 0.96",
+     "erro": null
+    }
+   ]
+  },
+  "relu_ort_g07": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 0.7,
+    "criterio": "variancia",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "relu"
+   },
+   "escore": 99.79037523269653,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9092,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 0.691,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.1 0.01 | ‖grad W‖: 0.3 0.094 0.89",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.6244,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 0.723,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.3 0.017 | ‖grad W‖: 0.29 0.095 0.83",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.2176,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.4 0.0026 | ‖grad W‖: 0.29 0.11 0.93",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8376,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.95 0.009 | ‖grad W‖: 0.37 0.11 0.95",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.7684,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 1.3 0.016 | ‖grad W‖: 0.29 0.1 0.73",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.2156,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1.4 0.0021 | ‖grad W‖: 0.32 0.12 0.58",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.3964,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1 0.014 | ‖grad W‖: 0.51 0.077 0.84",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.3068,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.64 0.0096 | ‖grad W‖: 0.5 0.062 0.74",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.192,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.91 0.0056 | ‖grad W‖: 0.54 0.071 0.63",
+     "erro": null
+    }
+   ]
+  },
+  "relu_ort_g14": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 1.4,
+    "criterio": "variancia",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "relu"
+   },
+   "escore": 26.853255629539486,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9004,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 0.368,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.1 0.01 | ‖grad W‖: 0.3 0.19 1.8",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.3,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 0.263,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.3 0.017 | ‖grad W‖: 0.29 0.19 1.7",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.1928,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.4 0.0026 | ‖grad W‖: 0.29 0.22 1.9",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8292,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 0.586,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.95 0.009 | ‖grad W‖: 0.37 0.21 1.9",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.1,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 0.007,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 1.3 0.016 | ‖grad W‖: 0.29 0.2 1.5",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.0964,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1.4 0.0021 | ‖grad W‖: 0.32 0.23 1.2",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.3628,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1 0.014 | ‖grad W‖: 0.51 0.15 1.7",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.2444,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 0.979,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.64 0.0096 | ‖grad W‖: 0.5 0.12 1.5",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.0968,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.91 0.0056 | ‖grad W‖: 0.54 0.14 1.3",
+     "erro": null
+    }
+   ]
+  },
+  "relu_ort_g05": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 0.5,
+    "criterio": "variancia",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "relu"
+   },
+   "escore": 110.6238603591919,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9156,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 0.926,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.1 0.01 | ‖grad W‖: 0.3 0.067 0.64",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.8796,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 1.085,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.3 0.017 | ‖grad W‖: 0.29 0.068 0.6",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.2264,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.4 0.0026 | ‖grad W‖: 0.29 0.08 0.67",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8356,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 1.138,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.95 0.009 | ‖grad W‖: 0.37 0.076 0.68",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.7856,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 1.3 0.016 | ‖grad W‖: 0.29 0.073 0.52",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.23,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1.4 0.0021 | ‖grad W‖: 0.32 0.083 0.41",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.3956,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1 0.014 | ‖grad W‖: 0.51 0.055 0.6",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.3284,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.64 0.0096 | ‖grad W‖: 0.5 0.044 0.53",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.178,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.91 0.0056 | ‖grad W‖: 0.54 0.051 0.45",
+     "erro": null
+    }
+   ]
+  },
+  "relu_ort_g03": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 0.3,
+    "criterio": "variancia",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "relu"
+   },
+   "escore": 75.19350126385689,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.8928,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 0.088,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.1 0.01 | ‖grad W‖: 0.3 0.04 0.38",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.8788,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 1.084,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.3 0.017 | ‖grad W‖: 0.29 0.041 0.36",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.568,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.4 0.0026 | ‖grad W‖: 0.29 0.048 0.4",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.83,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 0.655,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.95 0.009 | ‖grad W‖: 0.37 0.045 0.41",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.8148,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 1.3 0.016 | ‖grad W‖: 0.29 0.044 0.31",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.364,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1.4 0.0021 | ‖grad W‖: 0.32 0.05 0.25",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.4248,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1 0.014 | ‖grad W‖: 0.51 0.033 0.36",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.3196,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.64 0.0096 | ‖grad W‖: 0.5 0.027 0.32",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.2156,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.91 0.0056 | ‖grad W‖: 0.54 0.03 0.27",
+     "erro": null
+    }
+   ]
+  },
+  "lrelu02_ort_g05": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 0.5,
+    "criterio": "variancia",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "lrelu"
+   },
+   "escore": 98.32550048828125,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.906,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 0.574,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1 0.01 | ‖grad W‖: 0.33 0.073 0.7",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.8944,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 1.106,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.2 0.013 | ‖grad W‖: 0.31 0.068 0.65",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.4164,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.5 0.014 | ‖grad W‖: 0.29 0.078 0.9",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8404,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.95 0.009 | ‖grad W‖: 0.44 0.088 0.83",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.826,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 1.2 0.012 | ‖grad W‖: 0.33 0.071 0.62",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.444,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1.3 0.011 | ‖grad W‖: 0.27 0.058 0.45",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.4184,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1 0.011 | ‖grad W‖: 0.53 0.058 0.61",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.3656,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.7 0.013 | ‖grad W‖: 0.52 0.048 0.56",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.2364,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.83 0.0084 | ‖grad W‖: 0.49 0.049 0.46",
+     "erro": null
+    }
+   ]
+  },
+  "gelu_grad_g05": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 0.5,
+    "criterio": "gradiente",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "gelu"
+   },
+   "escore": 112.1532142162323,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9164,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 0.956,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1 0.0096 | ‖grad W‖: 0.31 0.066 0.65",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.8684,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 1.069,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.2 0.024 | ‖grad W‖: 0.49 0.1 0.85",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.2,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 4.9 0.092 | ‖grad W‖: 2.5 0.43 5.7",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.838,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.82 0.0076 | ‖grad W‖: 0.41 0.074 0.67",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.7084,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 1.216,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.73 0.0095 | ‖grad W‖: 0.33 0.061 0.55",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.1804,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1 0.02 | ‖grad W‖: 1.5 0.19 1.8",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.4084,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 0.88 0.0097 | ‖grad W‖: 0.52 0.05 0.52",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.284,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 1.241,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.31 0.0024 | ‖grad W‖: 0.43 0.032 0.23",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.1704,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.66 0.025 | ‖grad W‖: 3.4 0.15 0.81",
+     "erro": null
+    }
+   ]
+  },
+  "tanh_grad_g05": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 0.5,
+    "criterio": "gradiente",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "tanh"
+   },
+   "escore": 89.63084191083908,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.8996,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 0.338,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 0.67 0.0071 | ‖grad W‖: 0.43 0.078 0.77",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.912,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 1.131,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 0.72 0.0069 | ‖grad W‖: 0.58 0.082 0.66",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.8572,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 0.72 0.007 | ‖grad W‖: 3.3 0.15 0.46",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8376,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.74 0.0061 | ‖grad W‖: 0.51 0.093 0.9",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.8308,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.72 0.0071 | ‖grad W‖: 0.63 0.087 0.73",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.7804,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 0.73 0.0076 | ‖grad W‖: 3.3 0.15 0.47",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.3904,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 0.75 0.0067 | ‖grad W‖: 0.56 0.049 0.49",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.34,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.72 0.0067 | ‖grad W‖: 1.1 0.062 0.45",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.258,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.73 0.0073 | ‖grad W‖: 6.7 0.16 0.4",
+     "erro": null
+    }
+   ]
+  },
+  "lrelu02_ort": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 1.0,
+    "criterio": "variancia",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "lrelu"
+   },
+   "escore": 53.09072196483612,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9116,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 0.779,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1 0.01 | ‖grad W‖: 0.33 0.15 1.4",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.8524,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 1.047,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.2 0.013 | ‖grad W‖: 0.31 0.14 1.3",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.1148,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.5 0.014 | ‖grad W‖: 0.29 0.16 1.8",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8428,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.95 0.009 | ‖grad W‖: 0.44 0.18 1.7",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.748,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 1.2 0.012 | ‖grad W‖: 0.33 0.14 1.2",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.0964,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1.3 0.011 | ‖grad W‖: 0.27 0.12 0.9",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.36,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1 0.011 | ‖grad W‖: 0.53 0.12 1.2",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.3212,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.7 0.013 | ‖grad W‖: 0.52 0.097 1.1",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.1764,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.83 0.0084 | ‖grad W‖: 0.49 0.098 0.92",
+     "erro": null
+    }
+   ]
+  },
+  "lrelu04_ort": {
+   "config": {
+    "alfa": 0.4,
+    "ganho": 1.0,
+    "criterio": "variancia",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "lrelu"
+   },
+   "escore": 48.52671563625336,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.8936,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 0.118,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1 0.01 | ‖grad W‖: 0.36 0.17 1.6",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.8384,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 1.027,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.1 0.0094 | ‖grad W‖: 0.31 0.15 1.5",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.1,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.5 0.022 | ‖grad W‖: 0.29 0.14 1.8",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8264,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 0.345,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.95 0.0088 | ‖grad W‖: 0.5 0.21 2.1",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.7804,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 1.1 0.0096 | ‖grad W‖: 0.38 0.17 1.5",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.1,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 1.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1.2 0.017 | ‖grad W‖: 0.34 0.16 1.3",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.3412,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 0.98 0.0094 | ‖grad W‖: 0.55 0.13 1.3",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.3392,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.77 0.011 | ‖grad W‖: 0.55 0.11 1.2",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.244,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.95 0.014 | ‖grad W‖: 0.5 0.12 1.2",
+     "erro": null
+    }
+   ]
+  },
+  "gelu_var_ort": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 1.0,
+    "criterio": "variancia",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "gelu"
+   },
+   "escore": 63.29493582248688,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9244,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.2 0.012 | ‖grad W‖: 0.35 0.14 1.4",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.8352,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 1.022,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 2.4 0.084 | ‖grad W‖: 1 0.4 3.3",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.1,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 32 3.2 | ‖grad W‖: 16 5.3 1e+02",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8488,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.96 0.0097 | ‖grad W‖: 0.46 0.16 1.5",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.7236,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 1.246,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 1.6 0.049 | ‖grad W‖: 0.77 0.28 2.7",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.1,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 1.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 12 1.1 | ‖grad W‖: 12 3.2 64",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.3516,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1 0.012 | ‖grad W‖: 0.59 0.11 1.1",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.2656,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 1.119,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.75 0.02 | ‖grad W‖: 1.1 0.15 1.2",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.1,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 11 2.8 | ‖grad W‖: 35 5.4 65",
+     "erro": null
+    }
+   ]
+  },
+  "gelu_grad_ort": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 1.0,
+    "criterio": "gradiente",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "gelu"
+   },
+   "escore": 43.442182540893555,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9204,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 1.103,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1 0.0096 | ‖grad W‖: 0.31 0.13 1.3",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.8456,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 1.037,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.2 0.024 | ‖grad W‖: 0.49 0.2 1.7",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.1028,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 4.9 0.092 | ‖grad W‖: 2.5 0.87 11",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8396,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.82 0.0076 | ‖grad W‖: 0.41 0.15 1.3",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.678,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 1.156,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.73 0.0095 | ‖grad W‖: 0.33 0.12 1.1",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.0964,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1 0.02 | ‖grad W‖: 1.5 0.38 3.6",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.3556,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 0.88 0.0097 | ‖grad W‖: 0.52 0.099 1",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.2536,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 1.04,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.31 0.0024 | ‖grad W‖: 0.43 0.065 0.46",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.0968,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.66 0.025 | ‖grad W‖: 3.4 0.29 1.6",
+     "erro": null
+    }
+   ]
+  },
+  "silu_grad_ort": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 1.0,
+    "criterio": "gradiente",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "silu"
+   },
+   "escore": 62.14855194091796,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9244,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.2 0.013 | ‖grad W‖: 0.37 0.14 1.4",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.862,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 1.06,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 3.8 0.29 | ‖grad W‖: 2 0.8 6.8",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.1,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 3.5e+02 4.6e+02 | ‖grad W‖: 1.7e+02 71 1.1e+03",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8364,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 1.207,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.85 0.0085 | ‖grad W‖: 0.45 0.15 1.4",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.7644,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 1.3 0.064 | ‖grad W‖: 0.86 0.31 2.8",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.1,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 1.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 48 62 | ‖grad W‖: 1e+02 27 3.4e+02",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.3472,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 0.89 0.0091 | ‖grad W‖: 0.55 0.094 0.97",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.2436,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 0.973,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.46 0.011 | ‖grad W‖: 0.93 0.12 0.9",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.1,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 39 1.3e+02 | ‖grad W‖: 2e+02 22 2.8e+02",
+     "erro": null
+    }
+   ]
+  },
+  "elu_var_ort": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 1.0,
+    "criterio": "variancia",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "elu"
+   },
+   "escore": 70.92123270034789,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9168,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 0.971,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 0.95 0.0093 | ‖grad W‖: 0.41 0.19 1.9",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.8752,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 1.079,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 0.93 0.0085 | ‖grad W‖: 0.44 0.19 1.7",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.1,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.1 0.015 | ‖grad W‖: 0.57 0.21 1.3",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8348,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 1.069,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.94 0.0085 | ‖grad W‖: 0.54 0.24 2.3",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.7624,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 1 0.0094 | ‖grad W‖: 0.53 0.22 1.8",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.1,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 1.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1.1 0.015 | ‖grad W‖: 0.64 0.21 1.3",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.3784,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 0.96 0.0087 | ‖grad W‖: 0.59 0.13 1.3",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.348,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.88 0.011 | ‖grad W‖: 0.71 0.14 1.3",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.1576,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.99 0.015 | ‖grad W‖: 1.1 0.17 1.3",
+     "erro": null
+    }
+   ]
+  },
+  "selu_lecun": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 1.0,
+    "criterio": "variancia",
+    "pesos": "normal",
+    "escala_saida": 0.1,
+    "ativ": "selu"
+   },
+   "escore": 17.720690965652462,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.8672,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 0.9 0.0088 | ‖grad W‖: 0.46 0.25 2.4",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.1,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 0.93 0.01 | ‖grad W‖: 0.56 0.28 2.6",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.1,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1 0.012 | ‖grad W‖: 1.4 0.35 2.1",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8176,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.98 0.98 0.01 | ‖grad W‖: 0.56 0.31 3.1",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.1,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 0.007,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.99 0.011 | ‖grad W‖: 0.64 0.3 2.9",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.1,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 1.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1 0.011 | ‖grad W‖: 1.3 0.43 2.5",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.2612,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.97 0.99 0.011 | ‖grad W‖: 0.62 0.17 1.7",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.1,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 0.021,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.91 0.99 0.0093 | ‖grad W‖: 0.9 0.19 1.6",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.1,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.96 0.011 | ‖grad W‖: 2.5 0.32 1.5",
+     "erro": null
+    }
+   ]
+  },
+  "tanh_grad_ort": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 1.0,
+    "criterio": "gradiente",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "tanh"
+   },
+   "escore": 72.74743437767029,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9112,
+     "baseline": 0.8904,
+     "referencia": 0.9176,
+     "s_t": 0.765,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 0.67 0.0071 | ‖grad W‖: 0.43 0.16 1.5",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.882,
+     "baseline": 0.1148,
+     "referencia": 0.8196,
+     "s_t": 1.089,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 0.72 0.0069 | ‖grad W‖: 0.58 0.16 1.3",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.1752,
+     "baseline": 0.1148,
+     "referencia": 0.0876,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 0.72 0.007 | ‖grad W‖: 3.3 0.31 0.92",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8388,
+     "baseline": 0.8224,
+     "referencia": 0.834,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.74 0.0061 | ‖grad W‖: 0.51 0.19 1.8",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.8096,
+     "baseline": 0.0964,
+     "referencia": 0.5996,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.72 0.0071 | ‖grad W‖: 0.63 0.17 1.5",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.1928,
+     "baseline": 0.0964,
+     "referencia": 0.1,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 0.73 0.0076 | ‖grad W‖: 3.3 0.31 0.95",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.3756,
+     "baseline": 0.3768,
+     "referencia": 0.3416,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 0.75 0.0067 | ‖grad W‖: 0.56 0.099 0.97",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.3252,
+     "baseline": 0.0968,
+     "referencia": 0.2476,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.72 0.0067 | ‖grad W‖: 1.1 0.12 0.89",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.1588,
+     "baseline": 0.0968,
+     "referencia": 0.0968,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.73 0.0073 | ‖grad W‖: 6.7 0.31 0.8",
+     "erro": null
+    }
+   ]
+  }
+ },
+ "f=1.0|e=3|s=3": {
+  "gelu_grad_g05": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 0.5,
+    "criterio": "gradiente",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "gelu"
+   },
+   "escore": 113.4296214580536,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9715,
+     "baseline": 0.9636,
+     "referencia": 0.9666,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1 0.0096 | ‖grad W‖: 0.31 0.066 0.65",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.9668,
+     "baseline": 0.1135,
+     "referencia": 0.9564,
+     "s_t": 1.012,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.2 0.024 | ‖grad W‖: 0.49 0.1 0.85",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.6158,
+     "baseline": 0.1135,
+     "referencia": 0.1135,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 4.9 0.092 | ‖grad W‖: 2.5 0.43 5.7",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8765,
+     "baseline": 0.8703,
+     "referencia": 0.8684,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.82 0.0076 | ‖grad W‖: 0.41 0.074 0.67",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.8661,
+     "baseline": 0.1,
+     "referencia": 0.8412,
+     "s_t": 1.034,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.73 0.0095 | ‖grad W‖: 0.33 0.061 0.55",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.4241,
+     "baseline": 0.1,
+     "referencia": 0.1,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1 0.02 | ‖grad W‖: 1.5 0.19 1.8",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.4787,
+     "baseline": 0.4386,
+     "referencia": 0.4507,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 0.88 0.0097 | ‖grad W‖: 0.52 0.05 0.52",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.4549,
+     "baseline": 0.1,
+     "referencia": 0.4132,
+     "s_t": 1.133,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.31 0.0024 | ‖grad W‖: 0.43 0.032 0.23",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.2446,
+     "baseline": 0.1,
+     "referencia": 0.1,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.66 0.025 | ‖grad W‖: 3.4 0.15 0.81",
+     "erro": null
+    }
+   ]
+  },
+  "relu_ort_g05": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 0.5,
+    "criterio": "variancia",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "relu"
+   },
+   "escore": 113.32002639770506,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9697,
+     "baseline": 0.9636,
+     "referencia": 0.9666,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.1 0.01 | ‖grad W‖: 0.3 0.067 0.64",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.9628,
+     "baseline": 0.1135,
+     "referencia": 0.9564,
+     "s_t": 1.008,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.3 0.017 | ‖grad W‖: 0.29 0.068 0.6",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.5312,
+     "baseline": 0.1135,
+     "referencia": 0.1135,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.4 0.0026 | ‖grad W‖: 0.29 0.08 0.67",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8747,
+     "baseline": 0.8703,
+     "referencia": 0.8684,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.95 0.009 | ‖grad W‖: 0.37 0.076 0.68",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.8628,
+     "baseline": 0.1,
+     "referencia": 0.8412,
+     "s_t": 1.029,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 1.3 0.016 | ‖grad W‖: 0.29 0.073 0.52",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.752,
+     "baseline": 0.1,
+     "referencia": 0.1,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1.4 0.0021 | ‖grad W‖: 0.32 0.083 0.41",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.4861,
+     "baseline": 0.4386,
+     "referencia": 0.4507,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1 0.014 | ‖grad W‖: 0.51 0.055 0.6",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.4591,
+     "baseline": 0.1,
+     "referencia": 0.4132,
+     "s_t": 1.147,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.64 0.0096 | ‖grad W‖: 0.5 0.044 0.53",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.2761,
+     "baseline": 0.1,
+     "referencia": 0.1,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.91 0.0056 | ‖grad W‖: 0.54 0.051 0.45",
+     "erro": null
+    }
+   ]
+  },
+  "tanh_grad_g05": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 0.5,
+    "criterio": "gradiente",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "tanh"
+   },
+   "escore": 72.64032244682312,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9674,
+     "baseline": 0.9636,
+     "referencia": 0.9666,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 0.67 0.0071 | ‖grad W‖: 0.43 0.078 0.77",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.9645,
+     "baseline": 0.1135,
+     "referencia": 0.9564,
+     "s_t": 1.01,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 0.72 0.0069 | ‖grad W‖: 0.58 0.082 0.66",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.9555,
+     "baseline": 0.1135,
+     "referencia": 0.1135,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 0.72 0.007 | ‖grad W‖: 3.3 0.15 0.46",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8775,
+     "baseline": 0.8703,
+     "referencia": 0.8684,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.74 0.0061 | ‖grad W‖: 0.51 0.093 0.9",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.8701,
+     "baseline": 0.1,
+     "referencia": 0.8412,
+     "s_t": 1.039,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.72 0.0071 | ‖grad W‖: 0.63 0.087 0.73",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.8468,
+     "baseline": 0.1,
+     "referencia": 0.1,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 0.73 0.0076 | ‖grad W‖: 3.3 0.15 0.47",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.4351,
+     "baseline": 0.4386,
+     "referencia": 0.4507,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 0.75 0.0067 | ‖grad W‖: 0.56 0.049 0.49",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.426,
+     "baseline": 0.1,
+     "referencia": 0.4132,
+     "s_t": 1.041,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.72 0.0067 | ‖grad W‖: 1.1 0.062 0.45",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.3571,
+     "baseline": 0.1,
+     "referencia": 0.1,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.73 0.0073 | ‖grad W‖: 6.7 0.16 0.4",
+     "erro": null
+    }
+   ]
+  },
+  "lrelu02_ort_g05": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 0.5,
+    "criterio": "variancia",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "lrelu"
+   },
+   "escore": 113.96782040596007,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9709,
+     "baseline": 0.9636,
+     "referencia": 0.9666,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1 0.01 | ‖grad W‖: 0.33 0.073 0.7",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.9636,
+     "baseline": 0.1135,
+     "referencia": 0.9564,
+     "s_t": 1.009,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.2 0.013 | ‖grad W‖: 0.31 0.068 0.65",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.951,
+     "baseline": 0.1135,
+     "referencia": 0.1135,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.5 0.014 | ‖grad W‖: 0.29 0.078 0.9",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8734,
+     "baseline": 0.8703,
+     "referencia": 0.8684,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.95 0.009 | ‖grad W‖: 0.44 0.088 0.83",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.87,
+     "baseline": 0.1,
+     "referencia": 0.8412,
+     "s_t": 1.039,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 1.2 0.012 | ‖grad W‖: 0.33 0.071 0.62",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.81,
+     "baseline": 0.1,
+     "referencia": 0.1,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1.3 0.011 | ‖grad W‖: 0.27 0.058 0.45",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.4878,
+     "baseline": 0.4386,
+     "referencia": 0.4507,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1 0.011 | ‖grad W‖: 0.53 0.058 0.61",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.4807,
+     "baseline": 0.1,
+     "referencia": 0.4132,
+     "s_t": 1.216,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.7 0.013 | ‖grad W‖: 0.52 0.048 0.56",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.3837,
+     "baseline": 0.1,
+     "referencia": 0.1,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.83 0.0084 | ‖grad W‖: 0.49 0.049 0.46",
+     "erro": null
+    }
+   ]
+  },
+  "relu_ort_g07": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 0.7,
+    "criterio": "variancia",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "relu"
+   },
+   "escore": 61.37431025505066,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9676,
+     "baseline": 0.9636,
+     "referencia": 0.9666,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.1 0.01 | ‖grad W‖: 0.3 0.094 0.89",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.9654,
+     "baseline": 0.1135,
+     "referencia": 0.9564,
+     "s_t": 1.011,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.3 0.017 | ‖grad W‖: 0.29 0.095 0.83",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.1135,
+     "baseline": 0.1135,
+     "referencia": 0.1135,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 1.4 0.0026 | ‖grad W‖: 0.29 0.11 0.93",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8713,
+     "baseline": 0.8703,
+     "referencia": 0.8684,
+     "s_t": 1.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.95 0.009 | ‖grad W‖: 0.37 0.11 0.95",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.8552,
+     "baseline": 0.1,
+     "referencia": 0.8412,
+     "s_t": 1.019,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 1.3 0.016 | ‖grad W‖: 0.29 0.1 0.73",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.1,
+     "baseline": 0.1,
+     "referencia": 0.1,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1.4 0.0021 | ‖grad W‖: 0.32 0.12 0.58",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.4748,
+     "baseline": 0.4386,
+     "referencia": 0.4507,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 1 0.014 | ‖grad W‖: 0.51 0.077 0.84",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.4481,
+     "baseline": 0.1,
+     "referencia": 0.4132,
+     "s_t": 1.111,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.64 0.0096 | ‖grad W‖: 0.5 0.062 0.74",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.2612,
+     "baseline": 0.1,
+     "referencia": 0.1,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.91 0.0056 | ‖grad W‖: 0.54 0.071 0.63",
+     "erro": null
+    }
+   ]
+  },
+  "tanh_grad_g07": {
+   "config": {
+    "alfa": 0.2,
+    "ganho": 0.7,
+    "criterio": "gradiente",
+    "pesos": "ortogonal",
+    "escala_saida": 0.1,
+    "ativ": "tanh"
+   },
+   "escore": 72.30327367782591,
+   "tarefas": [
+    {
+     "tarefa": "mnist_L4",
+     "oculta": false,
+     "acc": 0.9686,
+     "baseline": 0.9636,
+     "referencia": 0.9666,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 0.67 0.0071 | ‖grad W‖: 0.43 0.11 1.1",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L16",
+     "oculta": false,
+     "acc": 0.961,
+     "baseline": 0.1135,
+     "referencia": 0.9564,
+     "s_t": 1.005,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 0.72 0.0069 | ‖grad W‖: 0.58 0.11 0.93",
+     "erro": null
+    },
+    {
+     "tarefa": "mnist_L48",
+     "oculta": false,
+     "acc": 0.6876,
+     "baseline": 0.1135,
+     "referencia": 0.1135,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 1 0.72 0.007 | ‖grad W‖: 3.3 0.22 0.64",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L4",
+     "oculta": false,
+     "acc": 0.8749,
+     "baseline": 0.8703,
+     "referencia": 0.8684,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.95 0.74 0.0061 | ‖grad W‖: 0.51 0.13 1.3",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L16",
+     "oculta": false,
+     "acc": 0.8678,
+     "baseline": 0.1,
+     "referencia": 0.8412,
+     "s_t": 1.036,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.72 0.0071 | ‖grad W‖: 0.63 0.12 1",
+     "erro": null
+    },
+    {
+     "tarefa": "fashion_L48",
+     "oculta": false,
+     "acc": 0.1751,
+     "baseline": 0.1,
+     "referencia": 0.1,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 0.73 0.0076 | ‖grad W‖: 3.3 0.21 0.66",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L4",
+     "oculta": false,
+     "acc": 0.4316,
+     "baseline": 0.4386,
+     "referencia": 0.4507,
+     "s_t": 0.0,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.96 0.75 0.0067 | ‖grad W‖: 0.56 0.069 0.68",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L16",
+     "oculta": false,
+     "acc": 0.4147,
+     "baseline": 0.1,
+     "referencia": 0.4132,
+     "s_t": 1.005,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.92 0.72 0.0067 | ‖grad W‖: 1.1 0.087 0.62",
+     "erro": null
+    },
+    {
+     "tarefa": "cifar10_L48",
+     "oculta": false,
+     "acc": 0.3003,
+     "baseline": 0.1,
+     "referencia": 0.1,
+     "s_t": 1.25,
+     "raio_x": "var(pré-ativ) 1ª/meio/última: 0.99 0.73 0.0073 | ‖grad W‖: 6.7 0.22 0.56",
+     "erro": null
+    }
+   ]
+  }
+ }
+}

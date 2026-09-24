@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Desafio 2 Slide</title>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Fira+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@page { size: 1920px 1080px; margin: 0; }
+:root {
+  --azul: #16357C; --azul-claro: #3F6DC4; --ciano: #0D8A99; --carmim: #B3121B;
+  --verde: #1E8E5A; --dourado: #E9A100; --cinza: #55607A; --texto: #1B2130;
+  --painel: #F5F7FB; --linha: #D7DDEA;
+  --sans: "Fira Sans", "Segoe UI", Arial, sans-serif; --mono: "Fira Mono", Consolas, monospace;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1920px; height: 1080px; background: #fff; }
+body { font-family: var(--sans); color: var(--texto); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.slide { position: relative; width: 1920px; height: 1080px; overflow: hidden; padding: 54px 80px 0; }
+.slide::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 10px; background: var(--azul); }
+
+header h1 { margin: 0; font-size: 50px; line-height: 1.1; font-weight: 700; color: var(--azul); }
+header p { margin: 10px 0 0; font-size: 25px; color: var(--cinza); }
+header p b { color: var(--texto); font-weight: 500; }
+
+.cols { display: grid; grid-template-columns: 560px 640px 1fr; gap: 44px; margin-top: 34px; }
+h2 { margin: 0 0 14px; font-size: 23px; font-weight: 700; color: var(--azul); text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* coluna 1: método */
+.passo { background: var(--painel); border-left: 7px solid var(--azul-claro); border-radius: 12px; padding: 16px 22px; margin-bottom: 14px; }
+.passo h3 { margin: 0 0 6px; font-size: 23px; color: var(--azul); }
+.passo p { margin: 0; font-size: 20px; line-height: 1.38; }
+.passo.chave { border-left-color: var(--verde); background: #E8F5EE; }
+.eq { font-family: var(--mono); font-size: 21px; font-weight: 500; color: var(--texto); display: block; margin: 4px 0 6px; }
+
+/* coluna 2: gráficos */
+.graf { background: var(--painel); border-radius: 12px; padding: 14px 16px 6px; margin-bottom: 14px; }
+.graf .tit { font-size: 20px; font-weight: 500; margin: 0 0 2px 6px; }
+.graf .sub { font-size: 16px; color: var(--cinza); margin: 0 0 0 6px; }
+svg text { font-family: var(--sans); }
+.legenda { display: flex; gap: 22px; font-size: 18px; margin: 4px 0 0 6px; }
+.legenda span::before { content: ""; display: inline-block; width: 22px; height: 5px; border-radius: 3px; margin-right: 8px; vertical-align: middle; background: var(--c); }
+.conclusao { font-size: 20px; line-height: 1.38; margin: 0; padding: 0 6px; }
+.conclusao b { color: var(--verde); font-weight: 700; }
+
+/* coluna 3: resultados */
+.escore { display: flex; align-items: baseline; gap: 18px; margin-bottom: 10px; }
+.escore .n { font-size: 70px; white-space: nowrap; font-weight: 700; color: var(--verde); line-height: 1; }
+.escore .d { font-size: 18px; color: var(--cinza); line-height: 1.35; white-space: nowrap; }
+.escore { gap: 14px; } .escore .n { font-size: 64px; }
+.escore .d b { color: var(--texto); font-weight: 500; }
+table { border-collapse: collapse; width: 100%; font-size: 21px; margin-bottom: 18px; }
+th, td { padding: 7px 10px; text-align: center; border-bottom: 1px solid var(--linha); }
+th { color: var(--azul); font-weight: 500; border-bottom: 3px solid var(--azul); }
+td:first-child, th:first-child { text-align: left; }
+td .v { font-weight: 700; display: block; }
+td .r { font-size: 16px; color: var(--cinza); display: block; }
+td.l48 .v { color: var(--verde); }
+td.l48 .r { color: var(--carmim); }
+.rank { font-size: 18px; }
+.rank .lin { display: grid; grid-template-columns: 250px 1fr 62px; align-items: center; gap: 10px; height: 31px; }
+.rank .bar { height: 18px; border-radius: 3px; background: var(--azul-claro); }
+.rank .lin.nos { font-weight: 700; } .rank .lin.nos .bar { background: var(--verde); }
+.rank .lin.ref .bar { background: var(--cinza); } .rank .lin.base .bar { background: var(--carmim); }
+.rank .num { text-align: right; font-variant-numeric: tabular-nums; }
+
+footer { position: absolute; left: 80px; right: 80px; bottom: 26px; display: flex; justify-content: space-between; font-size: 18px; color: var(--cinza); }
+</style>
+</head>
+<body>
+<div class="slide">
+  <header>
+    <h1>Desafio 2: ganho calibrado faz a rede de 48 camadas treinar</h1>
+    <p><b>Caio Couto · Victor Franco</b> &nbsp;·&nbsp; MLP 256 × L, sem BatchNorm e sem residual, SGD lr 0,05 com momento 0,9, 3 épocas</p>
+  </header>
+
+  <div class="cols">
+    <!-- ============ 1. como fizemos ============ -->
+    <section>
+      <h2>Como fizemos</h2>
+      <div class="passo">
+        <h3>1. Ativação</h3>
+        <span class="eq">f(x) = 0,5 · LeakyReLU(x; 0,2)</span>
+        <p>Elemento a elemento e sem parâmetros. A inclinação negativa mantém gradiente em todas as unidades.</p>
+      </div>
+      <div class="passo">
+        <h3>2. Escala dos pesos, calculada</h3>
+        <span class="eq">s² = 1 / (fan_in · E[f(z)²])</span>
+        <p>E[f²] por Monte Carlo (10⁶ amostras de z ~ N(0,1)), então a variância fica ≈ 1 em toda camada. Pesos <b>ortogonais</b> reescalados a s. Camada 1: s² = 1/fan_in. Logits: s × 0,1. Viés 0.</p>
+      </div>
+      <div class="passo chave">
+        <h3>3. O ganho 0,5 é o que destrava</h3>
+        <p>No passo 0 a rede é idêntica (os pesos crescem 2× para compensar), mas a taxa de aprendizado efetiva das camadas ocultas cai para <b>¼</b>. Com lr 0,05 e momento 0,9, esse passo menor evita a divergência.</p>
+      </div>
+      <div class="passo">
+        <h3>4. Como escolhemos</h3>
+        <p>20 candidatos (ativação × critério × pesos × ganho) numa triagem com o harness (25% dos dados, 1 época). Os 6 melhores foram para o modo completo: 3 épocas, 3 sementes.</p>
+      </div>
+    </section>
+
+    <!-- ============ 2. raio-X ============ -->
+    <section>
+      <h2>Raio-X em L = 48 (MNIST, passo 0)</h2>
+      <div class="graf">
+        <p class="tit">Variância da pré-ativação por camada</p>
+        <svg id="gVar" width="608" height="262"></svg>
+      </div>
+      <div class="graf">
+        <p class="tit">‖∇W‖ por camada</p>
+        <svg id="gGrad" width="608" height="262"></svg>
+      </div>
+      <div class="legenda">
+        <span style="--c: var(--carmim)">baseline: tanh + U(±0,05)</span>
+        <span style="--c: var(--cinza)">ReLU + He</span>
+        <span style="--c: var(--verde)">nossa</span>
+      </div>
+      <p class="conclusao" style="margin-top:14px">A baseline <b style="color:var(--carmim)">apaga o sinal</b> (10⁻³²). ReLU + He preserva a variância, mas com gradientes ~100× maiores: o SGD passa do ponto e para na chance. A nossa tem <b>variância ≈ 1 e gradiente estável</b>.</p>
+    </section>
+
+    <!-- ============ 3. resultados ============ -->
+    <section>
+      <h2>Resultados (modo completo)</h2>
+      <div class="escore">
+        <span class="n">S = 114,0</span>
+        <span class="d">de 125 possíveis<br><b>média 1,20 · mín. 1,01</b><br>9/9 tarefas acima da ref.</span>
+      </div>
+      <table>
+        <thead><tr><th>acurácia de teste</th><th>L = 4</th><th>L = 16</th><th>L = 48</th></tr></thead>
+        <tbody>
+          <tr><td>MNIST</td><td><span class="v">97,1%</span><span class="r">ref 96,7%</span></td><td><span class="v">96,4%</span><span class="r">ref 95,6%</span></td><td class="l48"><span class="v">95,1%</span><span class="r">ref 11,3%</span></td></tr>
+          <tr><td>Fashion</td><td><span class="v">87,3%</span><span class="r">ref 86,8%</span></td><td><span class="v">87,0%</span><span class="r">ref 84,1%</span></td><td class="l48"><span class="v">81,0%</span><span class="r">ref 10,0%</span></td></tr>
+          <tr><td>CIFAR-10</td><td><span class="v">48,8%</span><span class="r">ref 45,1%</span></td><td><span class="v">48,1%</span><span class="r">ref 41,3%</span></td><td class="l48"><span class="v">38,4%</span><span class="r">ref 10,0%</span></td></tr>
+        </tbody>
+      </table>
+      <h2 style="margin-bottom:8px">Escore S por candidato</h2>
+      <div class="rank" id="rank"></div>
+    </section>
+  </div>
+
+  <footer><span>GBC073 Inteligência Computacional, UFU</span><span>desafio2_CaioCouto_VictorFranco.py</span></footer>
+</div>
+
+<script>
+const D = {"baseline": {"var": [0.6865974068641663, 0.0539679117500782, 0.010449301451444626, 0.002216941211372614, 0.0004574893682729453, 9.901820158120245e-05, 2.0889410734525882e-05, 4.409864232002292e-06, 9.284540851695056e-07, 2.001792154260329e-07, 4.3735980170822586e-08, 9.077898432963138e-09, 1.9676844598137677e-09, 4.056472935332067e-10, 8.40956540515414e-11, 1.78551097518298e-11, 3.845585308526189e-12, 8.323155532841131e-13, 1.7707626272407684e-13, 3.758857103613317e-14, 8.018172273870344e-15, 1.7489666526222434e-15, 3.6517252658291874e-16, 7.91994599226288e-17, 1.714746898747529e-17, 3.5398007310027806e-18, 7.334098156515796e-19, 1.6089367310146765e-19, 3.483888607795298e-20, 7.406638212698032e-21, 1.576428936838126e-21, 3.2169937041530114e-22, 6.930114653374001e-23, 1.4527918021483445e-23, 3.124979982091901e-24, 6.38282445379133e-25, 1.3796489444213757e-25, 3.004511726704726e-26, 6.587710397138605e-27, 1.3146663578719597e-27, 2.6536856665564586e-28, 5.471122804410713e-29, 1.1523073579980804e-29, 2.509542012790831e-30, 5.2021732892533095e-31, 1.0990286784001679e-31, 2.4287551467279558e-32, 5.6795750760985976e-33], "grad": [4.105451698915754e-16, 4.153822574159895e-16, 4.2869653008586344e-16, 4.1603489630184895e-16, 4.3463825445261555e-16, 4.3799954588511663e-16, 4.1602272020323217e-16, 3.98077983108515e-16, 4.0973575050113514e-16, 3.977849626483242e-16, 3.9947799622142835e-16, 4.1811891498944975e-16, 3.9145516484283163e-16, 3.8025373645054475e-16, 4.0498746908728474e-16, 3.9738799536363756e-16, 3.9409457244603523e-16, 4.0956430573865494e-16, 3.9445397911346707e-16, 3.9830361150983986e-16, 4.132791804870755e-16, 4.2283270628047914e-16, 4.355671848979575e-16, 4.223108281058521e-16, 4.302507826045159e-16, 4.419534956828997e-16, 4.3828989289756764e-16, 4.159198586397e-16, 4.1237200820056614e-16, 4.272905877423193e-16, 4.2341130919279263e-16, 4.317223700014722e-16, 4.416352759925281e-16, 4.50915183674189e-16, 4.4059850766508884e-16, 4.48294940191417e-16, 4.319028938983558e-16, 4.478149901476791e-16, 4.556280749927119e-16, 4.598708100859495e-16, 4.394610482960447e-16, 4.38074349482271e-16, 4.3783773612241146e-16, 4.4145178748032914e-16, 4.30732717881724e-16, 4.2092791447056143e-16, 4.1147521206766065e-16, 4.150841282883356e-16]}, "referencia": {"var": [2.066709280014038, 2.1565568447113037, 2.3097832202911377, 2.4967026710510254, 2.4557948112487793, 2.5588021278381348, 2.7969651222229004, 2.2274906635284424, 2.5342788696289062, 3.1185054779052734, 3.0436151027679443, 3.522531270980835, 2.9944658279418945, 2.8320677280426025, 3.0186386108398438, 3.0252628326416016, 3.305490016937256, 3.4751412868499756, 3.260960102081299, 2.537088632583618, 2.588567018508911, 2.9256577491760254, 3.1795153617858887, 2.8381175994873047, 2.5444791316986084, 2.749265432357788, 2.296400547027588, 2.7870266437530518, 2.753061532974243, 2.6184256076812744, 2.560631513595581, 2.5223233699798584, 2.4532878398895264, 3.338972330093384, 3.2300519943237305, 3.153134822845459, 3.6114320755004883, 2.837122917175293, 2.509377956390381, 2.7490909099578857, 2.664060592651367, 2.637049913406372, 2.8605971336364746, 2.921008586883545, 2.7441329956054688, 3.010629653930664, 3.1726772785186768, 5.646246433258057], "grad": [3.381742000579834, 2.9781556129455566, 3.4836738109588623, 4.2517852783203125, 4.978864669799805, 5.837207317352295, 5.8126749992370605, 6.1603827476501465, 6.078375816345215, 6.067515850067139, 6.3365325927734375, 6.217555999755859, 6.01362419128418, 5.455541133880615, 5.167651176452637, 5.395617485046387, 5.004388809204102, 5.446656703948975, 5.544392108917236, 5.052972316741943, 5.708293914794922, 6.569011211395264, 6.940357208251953, 7.383021831512451, 8.7988920211792, 8.447833061218262, 7.985538005828857, 7.385015487670898, 8.052536964416504, 7.691768646240234, 7.548213005065918, 7.4498066902160645, 7.274245262145996, 7.802245140075684, 8.321974754333496, 8.878952026367188, 9.338528633117676, 8.218027114868164, 7.273121356964111, 7.948599338531494, 8.218445777893066, 8.718579292297363, 9.172297477722168, 10.45518970489502, 10.511890411376953, 10.855602264404297, 11.500012397766113, 11.508898735046387]}, "nossa": {"var": [1.025531530380249, 1.061456322669983, 1.0606110095977783, 1.0794837474822998, 1.1496144533157349, 1.3004013299942017, 1.185168981552124, 1.1035271883010864, 1.0840330123901367, 1.114018201828003, 1.1371277570724487, 1.1186041831970215, 1.0852034091949463, 1.2461751699447632, 1.143083930015564, 1.1732866764068604, 1.3883998394012451, 1.2761653661727905, 1.1990833282470703, 1.2413030862808228, 1.2124916315078735, 1.2906208038330078, 1.5618349313735962, 1.3049805164337158, 1.4692546129226685, 1.4342494010925293, 1.4223301410675049, 1.431162714958191, 1.4302352666854858, 1.7975492477416992, 1.8227033615112305, 1.404986023902893, 1.481762170791626, 1.4520480632781982, 1.5331488847732544, 1.4256023168563843, 1.2461514472961426, 1.26967191696167, 1.4587374925613403, 1.3473416566848755, 1.5055960416793823, 1.4481257200241089, 1.4508639574050903, 1.2967724800109863, 1.2914557456970215, 1.4204047918319702, 1.30417799949646, 0.008633994497358799], "grad": [0.20947425067424774, 0.04402638599276543, 0.04551692679524422, 0.04500286281108856, 0.04370710626244545, 0.046738818287849426, 0.04649961739778519, 0.04760850965976715, 0.046537965536117554, 0.04971814155578613, 0.048454802483320236, 0.047454044222831726, 0.04800569638609886, 0.047057103365659714, 0.04946698620915413, 0.05372852459549904, 0.05136572942137718, 0.05184447765350342, 0.050274964421987534, 0.05187426507472992, 0.05597500503063202, 0.057431381195783615, 0.056942813098430634, 0.05921386927366257, 0.05944010242819786, 0.061213165521621704, 0.06297474354505539, 0.06455226987600327, 0.06883668899536133, 0.07346780598163605, 0.06840718537569046, 0.0638776496052742, 0.06690220534801483, 0.06197928264737129, 0.06601071357727051, 0.05769040808081627, 0.058546774089336395, 0.05785304680466652, 0.05651582404971123, 0.05574340373277664, 0.06055016815662384, 0.05885777994990349, 0.05678227171301842, 0.056211844086647034, 0.05901896953582764, 0.06223133206367493, 0.05820779502391815, 0.5868215560913086]}};
+const COR = { baseline: "#B3121B", referencia: "#55607A", nossa: "#1E8E5A" };
+const NS = "http://www.w3.org/2000/svg";
+function el(tag, attrs, pai, txt) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (txt !== undefined) e.textContent = txt;
+  pai.appendChild(e); return e;
+}
+function sup(n) { return String(n).replace("-", "⁻").replace(/\d/g, d => "⁰¹²³⁴⁵⁶⁷⁸⁹"[d]); }
+function grafico(id, chave, nCamadas, lo, hi, passo, notas) {
+  const svg = document.getElementById(id);
+  const W = 608, H = 262, L = 62, R = 12, T = 10, B = 34;
+  const x = i => L + (i / (nCamadas - 1)) * (W - L - R);
+  const y = v => T + (hi - Math.log10(Math.max(v, 10 ** lo))) / (hi - lo) * (H - T - B);
+  for (let e = lo; e <= hi; e += passo) {
+    el("line", { x1: L, x2: W - R, y1: y(10 ** e), y2: y(10 ** e), stroke: e === 0 ? "#E9A100" : "#D7DDEA", "stroke-width": e === 0 ? 2 : 1, "stroke-dasharray": e === 0 ? "6 4" : "" }, svg);
+    el("text", { x: L - 8, y: y(10 ** e) + 6, "text-anchor": "end", "font-size": 16, fill: "#55607A" }, svg, e === 0 ? "1" : "10" + sup(e));
+  }
+  [1, 12, 24, 36, nCamadas].forEach(c => el("text", { x: x(c - 1), y: H - 10, "text-anchor": "middle", "font-size": 16, fill: "#55607A" }, svg, c === 1 ? "camada 1" : c));
+  for (const k of ["baseline", "referencia", "nossa"]) {
+    const s = D[k][chave].slice(0, nCamadas);
+    const pts = s.map((v, i) => `${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(" ");
+    el("polyline", { points: pts, fill: "none", stroke: COR[k], "stroke-width": 4, "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
+  }
+  (notas || []).forEach(n => el("text", { x: n.x, y: n.y, "font-size": 17, fill: n.c, "font-weight": 500, "text-anchor": n.a || "start" }, svg, n.t));
+}
+// variância: camadas ocultas 1..47 (a 48ª são os logits)
+grafico("gVar", "var", 47, -36, 6, 6, [
+  { x: 596, y: 34, t: "ReLU + He ≈ 2,5 · nossa ≈ 1,3", c: "#1B2130", a: "end" },
+  { x: 76, y: 214, t: "baseline: ×0,2 por camada → 10⁻³²", c: "#B3121B" },
+]);
+grafico("gGrad", "grad", 48, -16, 4, 4, [
+  { x: 596, y: 34, t: "ReLU + He: 3 a 11", c: "#55607A", a: "end" },
+  { x: 596, y: 92, t: "nossa: ≈ 0,05", c: "#1E8E5A", a: "end" },
+  { x: 596, y: 194, t: "baseline: 4·10⁻¹⁶", c: "#B3121B", a: "end" },
+]);
+
+const R = [
+  ["LeakyReLU 0,2 · ganho 0,5", 114.0, "nos"],
+  ["GELU · ganho 0,5", 113.4, ""],
+  ["ReLU ortogonal · ganho 0,5", 113.3, ""],
+  ["ReLU + He (referência)", 100.0, "ref"],
+  ["tanh crítica · ganho 0,5", 72.6, ""],
+  ["ReLU ortogonal · ganho 0,7", 61.4, ""],
+  ["tanh + U(±0,05) (baseline)", 0.0, "base"],
+];
+const rank = document.getElementById("rank");
+R.forEach(([nome, s, cls]) => {
+  const d = document.createElement("div"); d.className = "lin " + cls;
+  d.innerHTML = `<span>${nome}</span><div><div class="bar" style="width:${Math.max(s / 125 * 100, 0.8)}%"></div></div><span class="num">${s.toFixed(1).replace(".", ",")}</span>`;
+  rank.appendChild(d);
+});
+</script>
+</body>
+</html>
